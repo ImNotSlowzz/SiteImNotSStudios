@@ -20,7 +20,7 @@ const team: TeamMember[] = [
   {
     name: 'Victor Thomé',
     role: 'CTO (Chief Technology Officer)',
-    image: 'src/photos/victorGabriel.jpg',
+    image: 'public/photos/VictorGabriel.jpg',
     social: {
       instagram: 'https://www.instagram.com/thome_victorr',
       linkedin: 'https://www.linkedin.com/in/victor-thomé-bb5470387',
@@ -30,7 +30,7 @@ const team: TeamMember[] = [
   {
     name: 'Matheus Luis',
     role: 'Brand & Social Strategist',
-    image: 'src/photos/MatheusLuis.jpg',
+    image: 'public/photos/MatheusLuis.jpg',
     social: {
       instagram: 'https://www.instagram.com/mklyw._',
       linkedin: 'https://www.linkedin.com/in/matheus-luis-9a6b76372'
@@ -39,7 +39,7 @@ const team: TeamMember[] = [
   {
     name: 'João Lopes',
     role: 'CFO (Chief Financial Officer)',
-    image: 'src/photos/JoaoLopes.jpg',
+    image: 'public/photos/JoaoLopes.jpg',
     social: {
       instagram: 'https://www.instagram.com/_lopes.joao_',
       linkedin: 'https://linkedin.com',
@@ -48,7 +48,7 @@ const team: TeamMember[] = [
   {
     name: 'Gustavo Pereira',
     role: 'Head de Cibersegurança',
-    image: 'src/photos/GustavoPereira.jpg',
+    image: 'public/photos/GustavoPereira.jpg',
     social: {
       instagram: 'https://www.instagram.com/silvagustv',
       linkedin: 'https://www.linkedin.com/in/gustavolaguerre'
@@ -57,7 +57,7 @@ const team: TeamMember[] = [
   {
     name: 'Artur Augusto',
     role: 'CISO (Chief Information Security Officer)',
-    image: 'src/photos/ArturAugusto.jpg',
+    image: 'public/photos/ArturAugusto.jpg',
     social: {
       linkedin: 'https://www.linkedin.com/in/artur-augusto-gomes-210439327',
        instagram: 'https://www.instagram.com/txt_artur'
