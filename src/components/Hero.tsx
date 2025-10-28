@@ -68,10 +68,10 @@ function Hero() {
             ref={titleRef}
             className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight"
           >
-            <span className="text-black dark:text-white">Transforme Sua Visão em</span>
+            <span className="text-black dark:text-white">Sites que vendem, mesmo enquanto você dorme.</span>
             <br />
             <span className="animate-gradient bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600 dark:from-purple-300 dark:via-fuchsia-300 dark:to-violet-300 bg-clip-text text-transparent">
-              Realidade Digital
+              Transforme cliques em clientes.
             </span>
           </h1>
 
@@ -79,7 +79,7 @@ function Hero() {
             ref={subtitleRef}
             className="text-xl md:text-2xl text-gray-800 dark:text-purple-100 mb-14 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            Criamos sites profissionais e modernos que elevam sua marca e conquistam clientes. Da ideia ao lançamento, cuidamos de tudo.
+            Sua presença digital merece mais que um cartão de visitas — merece resultados. Criamos sites profissionais, integrados ao WhatsApp e otimizados para o Instagram, prontos para atrair, engajar e converter.
           </p>
 
           <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
@@ -87,7 +87,7 @@ function Hero() {
               Ver Planos
             </button>
             <button onClick={scrollToContact} className="btn-outline">
-              Falar com Especialista
+              Falar com um desenvolvedor
             </button>
           </div>
 

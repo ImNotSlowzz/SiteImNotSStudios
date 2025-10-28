@@ -18,52 +18,51 @@ interface TeamMember {
 
 const team: TeamMember[] = [
   {
-    name: 'João Silva',
-    role: 'CEO & Founder',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Victor Thomé',
+    role: 'CTO (Chief Technology Officer)',
+    image: 'src/photos/victorGabriel.jpg',
     social: {
-      instagram: 'https://instagram.com',
+      instagram: 'https://www.instagram.com/thome_victorr',
+      linkedin: 'https://www.linkedin.com/in/victor-thomé-bb5470387',
+      github: 'https://github.com/ImNotSlowzz'
+    }
+  },
+  {
+    name: 'Matheus Luis',
+    role: 'Brand & Social Strategist',
+    image: 'src/photos/MatheusLuis.jpg',
+    social: {
+      instagram: 'https://www.instagram.com/mklyw._',
+      linkedin: 'https://www.linkedin.com/in/matheus-luis-9a6b76372'
+    }
+  },
+  {
+    name: 'João Lopes',
+    role: 'CFO (Chief Financial Officer)',
+    image: 'src/photos/JoaoLopes.jpg',
+    social: {
+      instagram: 'https://www.instagram.com/_lopes.joao_',
       linkedin: 'https://linkedin.com',
-      github: 'https://github.com'
     }
   },
   {
-    name: 'Maria Santos',
-    role: 'Lead Designer',
-    image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Gustavo Pereira',
+    role: 'Head de Cibersegurança',
+    image: 'src/photos/GustavoPereira.jpg',
     social: {
-      instagram: 'https://instagram.com',
-      linkedin: 'https://linkedin.com'
+      instagram: 'https://www.instagram.com/silvagustv',
+      linkedin: 'https://www.linkedin.com/in/gustavolaguerre'
     }
   },
   {
-    name: 'Pedro Oliveira',
-    role: 'Full Stack Developer',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Artur Augusto',
+    role: 'CISO (Chief Information Security Officer)',
+    image: 'src/photos/ArturAugusto.jpg',
     social: {
-      instagram: 'https://instagram.com',
-      linkedin: 'https://linkedin.com',
-      github: 'https://github.com'
+      linkedin: 'https://www.linkedin.com/in/artur-augusto-gomes-210439327',
+       instagram: 'https://www.instagram.com/txt_artur'
     }
   },
-  {
-    name: 'Ana Costa',
-    role: 'Marketing Specialist',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
-    social: {
-      instagram: 'https://instagram.com',
-      linkedin: 'https://linkedin.com'
-    }
-  },
-  {
-    name: 'Carlos Mendes',
-    role: 'Backend Developer',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400',
-    social: {
-      linkedin: 'https://linkedin.com',
-      github: 'https://github.com'
-    }
-  }
 ];
 
 function Team() {
@@ -159,7 +158,8 @@ function Team() {
                     <h3 className="text-3xl font-bold text-black dark:text-white mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-fuchsia-600 dark:text-fuchsia-300 font-bold text-lg mb-6">
+                    <p className="text-fuchsia-800 dark:text-fuchsia-600 font-bold text-lg mb-6
+">
                       {member.role}
                     </p>
                     <div className="flex justify-center gap-4">
@@ -212,7 +212,8 @@ function Team() {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-purple-300 mb-2">
                 {team[currentIndex].name}
               </h3>
-              <p className="text-purple-600 dark:text-purple-400 font-semibold mb-6">
+              <p className="text-fuchsia-800 dark:text-fuchsia-600 font-bold text-lg mb-6
+">
                 {team[currentIndex].role}
               </p>
               <div className="flex justify-center gap-4">

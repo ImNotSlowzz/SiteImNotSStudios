@@ -9,6 +9,7 @@ interface Plan {
   name: string;
   description: string;
   price: string;
+  monthly?: string; // ✅ Adicionei a mensalidade como opcional
   features: string[];
   popular?: boolean;
   icon: 'star' | 'zap' | 'crown';
@@ -17,59 +18,79 @@ interface Plan {
 
 const plans: Plan[] = [
   {
-    name: 'Básico',
-    description: 'Ideal para quem está começando',
-    price: 'R$ 1.500',
+    name: 'Landing Page Básica',
+    description: 'Ideal para quem está começando e quer marcar presença online rapidamente.',
+    price: 'R$ 800',
     icon: 'star',
     color: 'emerald',
     features: [
-      'Landing Page responsiva',
-      'Até 3 seções personalizadas',
-      'Formulário de contato',
+      'Landing Page totalmente responsiva',
+      'Até 3 seções personalizadas (Sobre, Serviços, Contato)',
+      'Formulário de contato funcional e integrado',
       'Design moderno e profissional',
       'Integração com redes sociais',
-      'Otimização para SEO básico',
-      'Entrega em 7 dias'
+      '🎨 Design exclusivo alinhado à identidade da marca',
+      '🔍 Otimização básica para SEO (Google e buscadores)',
+      '📱 Compatível com dispositivos móveis e tablets',
+      '🛠️ Ajustes e suporte por 7 dias após a entrega',
+      '⏱️ Entrega em até 14 dias úteis'
     ]
   },
   {
-    name: 'Profissional',
-    description: 'Perfeito para negócios em crescimento',
-    price: 'R$ 3.500',
+    name: 'Landing Page Premium',
+    description: 'Landing page profissional, segura e otimizada para conversão, com hospedagem e suporte contínuo.',
+    price: 'R$ 1.200', // valor único de criação
+    monthly: 'R$ 250 / mês', // manutenção + hospedagem
+    icon: 'crown',
+    color: 'gold',
+    features: [
+      '🌐 Landing Page totalmente responsiva e otimizada para conversão',
+      '🎨 Design exclusivo e moderno alinhado à identidade da marca',
+      'Até 5 seções personalizadas (Sobre, Serviços, Depoimentos, Contato, CTA)',
+      'Formulário de contato integrado com notificações por e-mail',
+      '🚀 SEO básico para indexação no Google + monitoramento de performance',
+      '💻 Hospedagem na AWS Amplify (inclusa na mensalidade)',
+      '🔒 Certificado SSL gratuito via AWS Certificate Manager',
+      '📊 Integração com Google Analytics para monitoramento de resultados',
+      '💬 Suporte técnico contínuo (30 dias após entrega + manutenção mensal)',
+      '✨ Pequenas animações interativas (GSAP) para destaque de seções',
+      '⏱️ Entrega em até 14 dias úteis'
+    ]
+  },
+  {
+    name: 'Site Institucional Profissional',
+    description: 'Perfeito para negócios que precisam de presença digital completa, blog e painel administrativo.',
+    price: 'R$ 1.600',
     icon: 'zap',
     color: 'purple',
     features: [
-      'Site institucional completo',
-      'Até 7 páginas',
-      'Design personalizado',
-      'Formulários avançados',
-      'Blog integrado',
-      'Painel administrativo',
-      'Otimização SEO avançada',
-      'Integração com Google Analytics',
-      'Suporte 30 dias',
-      'Entrega em 15 dias'
-    ],
-    popular: true
+      '🌐 Site institucional completo e otimizado para conversão',
+      'Até 7 páginas totalmente personalizadas',
+      '🎨 Design exclusivo e alinhado à identidade da marca',
+      'Formulários avançados e integrados (contato, orçamento, newsletter)',
+      '📰 Blog integrado com sistema de postagens dinâmico',
+      '⚙️ Painel administrativo intuitivo para gerenciar conteúdo',
+      '🚀 SEO avançado + indexação completa no Google e Search Console',
+      '📊 Integração completa com Google Analytics',
+      '📈 Estrutura preparada para futuras expansões',
+      '💬 Suporte técnico por 30 dias após a entrega',
+      '💻 Hospedagem opcional + Certificado SSL incluso',
+      '⏱️ Entrega em até 30 dias úteis'
+    ]
   },
   {
-    name: 'Premium',
-    description: 'Solução completa para sua empresa',
-    price: 'R$ 6.500',
+    name: 'Suporte & Manutenção',
+    description: 'Pacote de suporte contínuo para manter seu site seguro, atualizado e performático.',
+    price: 'R$ 300 / mês',
     icon: 'crown',
     color: 'fuchsia',
     features: [
-      'Site completo e robusto',
-      'Páginas ilimitadas',
-      'E-commerce integrado',
-      'Sistema de pagamentos',
-      'Área de membros',
-      'Chat ao vivo',
-      'Automações personalizadas',
-      'Integração com APIs',
-      'Treinamento da equipe',
-      'Suporte 90 dias',
-      'Entrega em 30 dias'
+      'Suporte técnico prioritário',
+      'Atualizações regulares do site (conteúdo, plugins e design)',
+      'Monitoramento de desempenho e segurança',
+      'Backups automáticos semanais',
+      'Renovação de SSL e manutenção da hospedagem',
+      'Correções rápidas de bugs e pequenos ajustes'
     ]
   }
 ];
@@ -99,7 +120,7 @@ function Plans() {
 
   const openWhatsApp = (planName: string) => {
     const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o plano ${planName}.`);
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5511956814742?text=${message}`, '_blank');
   };
 
   const getIcon = (icon: string, color: string) => {
@@ -140,15 +161,11 @@ function Plans() {
             <div
               key={index}
               className={`plan-card relative group ${
-                plan.popular
-                  ? 'md:scale-110 md:-translate-y-4'
-                  : ''
+                plan.popular ? 'md:scale-110 md:-translate-y-4' : ''
               }`}
             >
               <div className={`card relative overflow-hidden ${
-                plan.popular
-                  ? 'border-4 dark:border-purple-400 dark:border-4'
-                  : ''
+                plan.popular ? 'border-4 dark:border-purple-400 dark:border-4' : ''
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20">
@@ -178,14 +195,23 @@ function Plans() {
                     <p className="text-base text-gray-700 dark:text-purple-200 mb-6">
                       {plan.description}
                     </p>
+
                     <div className="mb-3">
                       <span className="text-5xl font-extrabold gradient-text">
                         {plan.price}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-600 dark:text-purple-300 font-semibold">
-                      Pagamento único
-                    </p>
+
+                    {/* ✅ Mensalidade opcional */}
+                    {plan.monthly ? (
+                      <p className="text-sm text-gray-600 dark:text-purple-300 font-semibold">
+                        {plan.monthly} (manutenção e hospedagem)
+                      </p>
+                    ) : (
+                      <p className="text-sm text-gray-600 dark:text-purple-300 font-semibold">
+                        Pagamento único
+                      </p>
+                    )}
                   </div>
 
                   <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-purple-500 to-transparent mb-8"></div>

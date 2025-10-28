@@ -36,7 +36,7 @@ function App() {
           <div className="flex justify-between items-center h-18">
             <div className="flex items-center">
               <h1 className="text-3xl font-extrabold text-black dark:text-transparent dark:bg-gradient-to-r dark:from-purple-300 dark:via-fuchsia-300 dark:to-violet-300 dark:bg-clip-text">
-                ImNot's
+                ImNot's Studios
               </h1>
             </div>
 

@@ -43,7 +43,7 @@ function Contact() {
     );
 
     setTimeout(() => {
-      window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+      window.open(`https://wa.me/5511956814742?text=${message}`, '_blank');
       setIsSubmitting(false);
       setFormData({ name: '', email: '', phone: '', message: '' });
     }, 500);
@@ -57,7 +57,7 @@ function Contact() {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5511956814742', '_blank');
   };
 
   return (
@@ -206,7 +206,7 @@ function Contact() {
                     Email
                   </h4>
                   <p className="text-gray-700 dark:text-purple-200 font-medium text-lg">
-                    contato@imnots.com.br
+                    studiosimnots@gmail.com
                   </p>
                 </div>
               </div>
@@ -222,7 +222,7 @@ function Contact() {
                     Telefone
                   </h4>
                   <p className="text-gray-700 dark:text-purple-200 font-medium text-lg">
-                    (11) 99999-9999
+                    (11) 95681-4742
                   </p>
                 </div>
               </div>
@@ -233,7 +233,7 @@ function Contact() {
                 Horário de Atendimento
               </h4>
               <p className="mb-2 text-lg font-medium">Segunda a Sexta: 9h às 18h</p>
-              <p className="text-lg font-medium">Sábado: 9h às 13h</p>
+              
             </div>
           </div>
         </div>
